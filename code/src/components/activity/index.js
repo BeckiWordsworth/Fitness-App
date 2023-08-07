@@ -1,7 +1,6 @@
 import React from "react"
 import ActivityRemoval from '../activityRemoval'
 import Calendar from '../calendar'
-import { Link } from 'react-router-dom'
 import DayPickerInput from 'react-day-picker/DayPickerInput'
 import 'react-day-picker/lib/style.css'
 

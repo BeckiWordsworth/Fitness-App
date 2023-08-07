@@ -26,10 +26,9 @@ body {
 
 .instructions {
   width: 100%;
-  display: flex;
-  flex-flow: row wrap;
   .text {
     width: 50%;
+    font-size: 50px;
   }
   .gif {
     width: 50%;
@@ -74,6 +73,7 @@ body .club-list-item:hover {
 
 h1 {
   font-size: 30px;
+  font-weight: 400;
   border-bottom: 4px solid #ff6f69;
   display: inline-block;
   margin-bottom: 20px;
@@ -84,17 +84,18 @@ h2 {
   font-size: 25px;
   font-weight: 300;
   color: #ff6f69;
-  text-align: center;
 }
 
 h3 {
   font-size: 30px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h4 {
   font-size: 16px;
+  font-weight: 400;
   margin-bottom: 20px;
   font-style: italic;
 }
@@ -105,6 +106,10 @@ table tr td {
 
 .activityTable {
   display: none;
+}
+.search-club {
+  text-align: center;
+  padding-top: 20px;
 }
 
 .graphs {
@@ -140,6 +145,7 @@ table tr td {
     filter: grayscale(100%);
     img {
       width: 100%;
+      height: 100%;
     }
   }
   .completed {
@@ -182,4 +188,34 @@ button:focus {
 .buttonSection {
 margin: 0 auto;
 
+}
+
+#hero1{
+ background:url(https://images.everydayhealth.com/images/strength-training-health-benefits-1440x810.jpg);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+}
+#hero2{background: url(https://images.everydayhealth.com/images/strength-training-health-benefits-1440x810.jpg);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+}
+.hero, .content{
+  text-align:center; 
+  position:relative;
+  width: 100%;
+}
+
+.inner{
+  min-height:600px;
+  position: relative;
+}
+
+.hero h1, .hero p{ 
+  color:black;
+}
+
+.content h1, .content p{
+  color:#333;
 }

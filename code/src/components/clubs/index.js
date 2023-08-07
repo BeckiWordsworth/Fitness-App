@@ -59,26 +59,23 @@ class Clubs extends React.Component {
     let slicedClubs = this.state.clubs.slice(0, this.state.clubsToShow)
     return (
       <div>
-        {/* <div className="navigation">
-          <br />
-          <div className="vertical-navigation">
-            <Link to="/activity">Add an activity <i class="fas fa-arrow-right"></i></Link>
-            <br />
-            <Link to="/stats">View stats page <i class="fas fa-arrow-right"></i></Link>
-            <br />
-            <Link to="/badges">View your badges <i class="fas fa-arrow-right"></i></Link>
-          </div>
-        </div> */}
         { this.club ? <h2>{this.club}</h2> : null }
-        <div className="instructions">
+        <section id="hero1" class="hero">
+        <div className="inner">
+          <div className="copy">
+          <h1>Get active and support your sports club!</h1>
+          <div className="instructions">
           <div className="text">
-            <h3>Get active and support your sports club!</h3>
             <h4>1. Choose your sports club</h4>
             <h4>2. Add your fitness activities</h4>
             <h4>3. Earn points for your team! <em>1 minute = 10 points</em></h4>
           </div>
-          <img className="gif" src="./images/cycling.gif" alt="illustrated cycling animation" />
         </div>
+          </div>
+          </div>
+        </section>
+      
+        <div className="search-club">
         <h1>Choose your Club</h1>
         <form>
           <input id="site-search" type="search" placeholder="Search for..." value={this.state.query} onChange={this.queryChange} />
@@ -93,6 +90,7 @@ class Clubs extends React.Component {
              ))}
          </ul>
         <button onClick={this.handleClickLoadMore}> Load More Clubs </button>
+      </div>
       </div>
     )
   }
