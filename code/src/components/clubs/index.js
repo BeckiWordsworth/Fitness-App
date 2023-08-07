@@ -1,6 +1,5 @@
 import React from "react"
 import ClubList from "../clubList"
-import { Link } from 'react-router-dom'
 
 class Clubs extends React.Component {
 
@@ -60,7 +59,7 @@ class Clubs extends React.Component {
     let slicedClubs = this.state.clubs.slice(0, this.state.clubsToShow)
     return (
       <div>
-        <div className="navigation">
+        {/* <div className="navigation">
           <br />
           <div className="vertical-navigation">
             <Link to="/activity">Add an activity <i class="fas fa-arrow-right"></i></Link>
@@ -69,8 +68,8 @@ class Clubs extends React.Component {
             <br />
             <Link to="/badges">View your badges <i class="fas fa-arrow-right"></i></Link>
           </div>
-        </div>
-        <h2>{this.club}</h2>
+        </div> */}
+        { this.club ? <h2>{this.club}</h2> : null }
         <div className="instructions">
           <div className="text">
             <h3>Get active and support your sports club!</h3>

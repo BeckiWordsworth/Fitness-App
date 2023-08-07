@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from 'react-router-dom'
 import Bubble from "../bubbles"
 import Stream from '../stream'
 import BubbleMonth from "../bubbleMonth"
@@ -27,7 +26,7 @@ class Stats extends React.Component {
 
     return (
       <div>
-        <div className="navigation">
+        {/* <div className="navigation">
           <Link to="/"><i class="fas fa-arrow-left"></i> Change your club</Link>
           <br />
           <div className="vertical-navigation">
@@ -35,7 +34,7 @@ class Stats extends React.Component {
             <br />
             <Link to="/badges">View your badges <i class="fas fa-arrow-right"></i></Link>
           </div>
-        </div>
+        </div> */}
         <h2>You are playing for {this.club}</h2>
         <h1>Your exercise stats</h1>
 

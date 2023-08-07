@@ -35,16 +35,7 @@ class Activity extends React.Component {
   render() {
     return (
       <div>
-        <div className="navigation">
-          <Link to="/"><i class="fas fa-arrow-left"></i> Change your club</Link>
-          <br />
-          <div className="vertical-navigation">
-            <Link to="/stats">View stats page <i class="fas fa-arrow-right"></i></Link>
-            <br />
-            <Link to="/badges">View your badges <i class="fas fa-arrow-right"></i></Link>
-          </div>
-        </div>
-        <h2>{this.club}</h2>
+        { this.club ? <h2>{this.club}</h2> : null }
         <h1>Add a new activity</h1>
         <p>Activity</p>
         <select onChange={event => this.setState({selectedActivity: event.target.value})}>

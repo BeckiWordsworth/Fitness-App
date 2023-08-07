@@ -1,11 +1,12 @@
 import React from 'react'
 import moment from 'moment'
 import Clubs from './clubs'
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import ClubList from './clubList'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Activity from "./activity"
 import Badges from './badges'
 import Stats from "./stats"
+import Header from "./header";
+import "./app.css";
 
 
 const activityList = ["swim", "hike", "gym", "run", "cycle", "other"];
@@ -187,17 +188,17 @@ class App extends React.Component {
       let dayData = activitiesByDay[day]
       let value = 0;
 
-      if ((dayData.swim > 0) && (dayData.swim == dayData.total)) {
+      if ((dayData.swim > 0) && (dayData.swim === dayData.total)) {
         value = 100;
-      } else if ((dayData.hike > 0) && (dayData.hike == dayData.total)) {
+      } else if ((dayData.hike > 0) && (dayData.hike === dayData.total)) {
         value = 200;
-      } else if ((dayData.gym > 0) && (dayData.gym == dayData.total)) {
+      } else if ((dayData.gym > 0) && (dayData.gym === dayData.total)) {
         value = 300;
-      } else if ((dayData.run > 0) && (dayData.run == dayData.total)) {
+      } else if ((dayData.run > 0) && (dayData.run === dayData.total)) {
         value = 400;
-      } else if ((dayData.cycle > 0) && (dayData.cycle == dayData.total)) {
+      } else if ((dayData.cycle > 0) && (dayData.cycle === dayData.total)) {
         value = 500;
-      } else if ((dayData.other > 0) && (dayData.other == dayData.total)) {
+      } else if ((dayData.other > 0) && (dayData.other === dayData.total)) {
         value = 600;
       } else {
         value = 700;
@@ -230,24 +231,25 @@ class App extends React.Component {
     })
   }
 
-
   render() {
     return (
         <Router>
-        <div>
-          <Switch>
-              <Route exact path="/" component={Clubs} />
-              <Route exact
-                path="/activity"
-                render={(props) => <Activity {...props}
-                  activityList={activityList}
-                  durationList={durationList}
-                  calendarData={this.state.calendarData}
-                  handleAddEntry={this.addEntry}
-                  data={this.state.data}
-                  handleRemoveEntry={this.removeEntry}
-                  />}
-              />
+          <div className="page-wrapper">
+            <Header />
+            <div className="page-content">
+              <Switch>
+                <Route exact path="/" component={Clubs} />
+                <Route exact
+                  path="/activity"
+                  render={(props) => <Activity {...props}
+                    activityList={activityList}
+                    durationList={durationList}
+                    calendarData={this.state.calendarData}
+                    handleAddEntry={this.addEntry}
+                    data={this.state.data}
+                    handleRemoveEntry={this.removeEntry}
+                    />}
+                />
                 <Route exact path="/stats"
                   render={(props) => <Stats {...props}
                     swimTime={this.state.swimTime}
@@ -265,12 +267,13 @@ class App extends React.Component {
                     otherMonthTime={this.state.otherMonthTime}
                     />}
                   />
-              <Route path="/badges"
-                render={(props) => <Badges {...props}
-                  pointsData={this.state.pointsData}
-                  />}
-                />
-            </Switch>
+                <Route path="/badges"
+                  render={(props) => <Badges {...props}
+                    pointsData={this.state.pointsData}
+                    />}
+                  />
+              </Switch>
+            </div>
           </div>
         </Router>
     )

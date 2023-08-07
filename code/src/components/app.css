@@ -1,0 +1,14 @@
+body {
+    background-color: #eef1f3;
+}
+
+.page-wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+.page-content {
+    margin: 60px 10%;
+    padding: 10px;
+    background-color: white;
+}

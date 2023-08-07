@@ -1,6 +1,5 @@
 import React from "react"
 import ActivityItem from "../activityItem"
-import { Link } from 'react-router-dom'
 import 'react-day-picker/lib/style.css'
 
 class ActivityRemoval extends React.Component {

@@ -1,6 +1,4 @@
 import React from 'react'
-import { render } from 'react-dom'
-import Stats from '../stats'
 import { ResponsiveCalendar } from '@nivo/calendar'
 import './style.css'
 
@@ -26,17 +24,17 @@ const colors = ['#fae04d', '#ff744c', '#789792', '#b1646a', '#efa9a1', '#8470c7'
           dayBorderWidth={2}
           dayBorderColor="#ffffff"
           tooltip = {(data) => {
-            if ( data.value == 100 ) {
+            if ( data.value === 100 ) {
               return (<p>{data.day}: Swimming</p>)
-            } else if ( data.value == 200 ) {
+            } else if ( data.value === 200 ) {
               return (<p>{data.day}: Hiking</p>)
-            } else if ( data.value == 300 ) {
+            } else if ( data.value === 300 ) {
               return (<p>{data.day}: Gym</p>)
-            } else if ( data.value == 400 ) {
+            } else if ( data.value === 400 ) {
               return (<p>{data.day}: Running</p>)
-            } else if ( data.value == 500 ) {
+            } else if ( data.value === 500 ) {
               return (<p>{data.day}: Cycling</p>)
-            } else if ( data.value == 600 ) {
+            } else if ( data.value === 600 ) {
               return (<p>{data.day}: Other</p>)
             } else {
               return (<p>{data.day}: Multiple Activities</p>)

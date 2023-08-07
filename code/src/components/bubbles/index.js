@@ -1,6 +1,5 @@
 import React from 'react'
 import { ResponsiveBubble } from '@nivo/circle-packing'
-import Stats from '../stats'
 import { generateCountriesData } from '@nivo/generators'
 
 const colors = ['#fae04d', '#ff744c', '#789792', '#b1646a', '#efa9a1', '#8470c7', '#97a66f']

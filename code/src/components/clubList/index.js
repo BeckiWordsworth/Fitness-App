@@ -2,10 +2,6 @@ import React from "react"
 
 class ClubList extends React.Component {
 
-  constructor(props) {
-      super(props)
-  }
-
   onClickHandler = (evt) => {
     if (localStorage === "") {
       localStorage.setItem("Club id", this.props.name);

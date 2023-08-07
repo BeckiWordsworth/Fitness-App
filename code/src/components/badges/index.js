@@ -1,6 +1,5 @@
 import React from "react"
 import Badge from "../badge"
-import { Link } from 'react-router-dom'
 import 'react-day-picker/lib/style.css'
 
 class Badges extends React.Component {
@@ -10,7 +9,7 @@ class Badges extends React.Component {
   render() {
     return (
       <div>
-        <div className="navigation">
+        {/* <div className="navigation">
           <Link to="/"><i class="fas fa-arrow-left"></i> Change your club</Link>
           <br />
           <div className="vertical-navigation">
@@ -18,7 +17,7 @@ class Badges extends React.Component {
             <br />
             <Link to="/stats">View stats page <i class="fas fa-arrow-right"></i></Link>
           </div>
-        </div>
+        </div> */}
         <h2>{this.club}</h2>
         <h1>Your points and badges</h1>
         <p>Great job! You have earned {this.props.pointsData} points for {this.club} so far!</p>
